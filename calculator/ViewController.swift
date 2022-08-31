@@ -13,6 +13,7 @@ class ViewController: UIViewController {
     @IBOutlet weak var userText: UITextField!
     @IBOutlet weak var userText2: UITextField!
     @IBOutlet weak var easterImage: UIImageView!
+    @IBOutlet weak var arrow: UILabel!
     
     public var num1:Float = 0
     public var num2:Float = 0
@@ -21,7 +22,8 @@ class ViewController: UIViewController {
     public var dev:Int = 0
     override func viewDidLoad() {
         super.viewDidLoad()
-        // Do any additional setup after loading the view.
+        calculatedOutput.text = " "
+        arrow.transform = CGAffineTransform(rotationAngle: CGFloat.pi / 2)
     }
     
     @IBAction func devide(_ sender: UIButton) {
@@ -68,6 +70,10 @@ class ViewController: UIViewController {
         }
     }
     
-
+    @IBAction func clear(_ sender: Any) {
+        calculatedOutput.text = " "
+        easterImage.isHidden = true
+    }
+    
 }
 
