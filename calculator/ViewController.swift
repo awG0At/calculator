@@ -8,7 +8,7 @@
 import UIKit
 
 class ViewController: UIViewController {
-
+//Outlets and Variables
     @IBOutlet weak var calculatedOutput: UILabel!
     @IBOutlet weak var userText: UITextField!
     @IBOutlet weak var userText2: UITextField!
