@@ -20,6 +20,7 @@ class ViewController: UIViewController {
     public var output:Float = 0
     public var mult:Int = 0
     public var dev:Int = 0
+    public var addd:Int = 0
     override func viewDidLoad() {
         super.viewDidLoad()
         calculatedOutput.text = " "
@@ -29,11 +30,20 @@ class ViewController: UIViewController {
     @IBAction func devide(_ sender: UIButton) {
         dev = 1
         mult = 0
+        addd = 0
     }
     
     @IBAction func multi(_ sender: UIButton) {
         dev = 0
         mult = 1
+        addd = 0
+    }
+    
+    @IBAction func ad(_ sender: UIButton) {
+        dev = 0
+        mult = 0
+        addd = 1
+        
     }
     
     
@@ -50,11 +60,18 @@ class ViewController: UIViewController {
             output = num1 / num2
             print(output)
             calculatedOutput.text = "\(output)"
+            print("deved")
         }
-        else{
+        else if mult == 1{
             output = num1 * num2
             print(output)
             calculatedOutput.text = "\(output)"
+            print("multed")
+        }else if addd == 1{
+            output = num1 + num2
+            print(output)
+            calculatedOutput.text = "\(output)"
+            print("added")
         }
            
     
