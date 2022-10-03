@@ -14,6 +14,7 @@ class ViewController: UIViewController {
     @IBOutlet weak var userText2: UITextField!
     @IBOutlet weak var easterImage: UIImageView!
     @IBOutlet weak var arrow: UILabel!
+    @IBOutlet weak var arrow2: UILabel!
     
     public var num1:Float = 0
     public var num2:Float = 0
@@ -25,6 +26,7 @@ class ViewController: UIViewController {
         super.viewDidLoad()
         calculatedOutput.text = " "
         arrow.transform = CGAffineTransform(rotationAngle: CGFloat.pi / 2)
+        arrow2.transform = CGAffineTransform(rotationAngle: CGFloat.pi / 2)
     }
     
     @IBAction func devide(_ sender: UIButton) {
